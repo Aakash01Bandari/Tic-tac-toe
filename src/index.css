@@ -18,8 +18,10 @@ code {
 }
 .square {
   background: #fff;
+  border: 1px solid #999;
   float: left;
   font-size: 64px;
+  font-weight: bold;
   line-height: 34px;
   height: 150px;
   margin-right: -1px;
