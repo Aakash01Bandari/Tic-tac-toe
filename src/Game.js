@@ -56,7 +56,7 @@ class Game extends React.Component {
         const current = history[this.state.currentStepNumber];
 
         return (
-            <div>
+            <div className="game">
                 <div>
                     Tic tac toe
                     <Board
