@@ -16,6 +16,11 @@ code {
   display: flex;
   flex-direction: row;
 }
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
 .square {
   background: #fff;
   border: 1px solid #999;
