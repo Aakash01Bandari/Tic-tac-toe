@@ -67,6 +67,9 @@ class Game extends React.Component {
         const { history } = this.state;
         const current = history[this.state.currentStepNumber];
 
+        let status;
+
+            status = `Next player: ${this.state.xIsNext ? 'X' : 'O'}`;
         return (
             <div className="game">
                 <div className="game-board">
@@ -76,7 +79,7 @@ class Game extends React.Component {
                     />
                 </div>
                 <div className="game-info">
-                    <div>Game Status</div>
+                    <div>{status}</div>
                 </div>
                 <div className="reset">
                     <button className="button" onClick={() => this.resetMoves()}>
