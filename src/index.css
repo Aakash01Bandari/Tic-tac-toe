@@ -30,3 +30,6 @@ code {
   text-align: center;
   width: 150px;
 }
+.square:focus {
+  outline: none;
+}
