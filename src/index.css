@@ -33,3 +33,10 @@ code {
 .square:focus {
   outline: none;
 }
+.group-square{
+  margin-left:450px;
+}
+ol,
+ul {
+  padding-left: 30px;
+}
