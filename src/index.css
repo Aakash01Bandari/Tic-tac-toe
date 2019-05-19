@@ -6,11 +6,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
 .game {
   margin-top: 80px;
   display: flex;
@@ -40,10 +35,6 @@ code {
 }
 .group-square{
   margin-left:450px;
-}
-ol,
-ul {
-  padding-left: 30px;
 }
 .game-info {
   margin-left: 20px;

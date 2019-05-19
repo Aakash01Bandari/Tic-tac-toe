@@ -58,8 +58,8 @@ class Game extends React.Component {
             currentStepNumber: 0,
             xIsNext: true,
         };
-        this.handleClick=this.handleClick.bind(this);
-        this.resetMoves=this.resetMoves.bind(this);
+        this.handleClick = this.handleClick.bind(this);
+        this.resetMoves = this.resetMoves.bind(this);
     }
 
     handleClick(i) {
@@ -80,6 +80,7 @@ class Game extends React.Component {
             currentStepNumber: history.length,
         });
     }
+
     resetMoves() {
         this.setState({
             history: [
@@ -92,10 +93,14 @@ class Game extends React.Component {
     }
 
     render() {
-        const { history } = this.state;
+        const {history} = this.state;
         const current = history[this.state.currentStepNumber];
-        const { winner, winnerRow } = calculateWinner(current.squares);
-
+        const {winner, winnerRow} = calculateWinner(current.squares);
+        const moves = history.map((item,i)=>{
+            return(
+                <li>{item.stepNumber}</li>
+            )
+        })
         let status;
         if (winner) {
             status = `Winner ${winner}`;
@@ -115,6 +120,7 @@ class Game extends React.Component {
                 </div>
                 <div className="game-info">
                     <div>{status}</div>
+                    <ol>{moves}</ol>
                 </div>
                 <div className="reset">
                     <button className="button" onClick={() => this.resetMoves()}>
