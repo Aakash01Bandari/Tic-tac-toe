@@ -35,7 +35,7 @@ body {
   outline: none;
 }
 .group-square{
-  margin-left:400px;
+  margin-left:200px;
 }
 .game-info {
   margin-left: 20px;
@@ -51,7 +51,7 @@ body {
   cursor: pointer;
 }
 .button {
-  background-color: #555555; /* Green */
+  background-color: #062700; /* Green */
   border: none;
   color: #fff;
   padding: 5px 10px;
@@ -59,11 +59,17 @@ body {
   text-decoration: none;
   font-size: 14px;
   cursor: pointer;
+  margin-top: 8px;
+  width:280px
 }
-
+ol,
+ul {
+  padding-left: 30px;
+}
 .button--green {
   background-color: #4caf50;
   color: #000;
   font-weight: bold;
+  width:280px
 }
 
