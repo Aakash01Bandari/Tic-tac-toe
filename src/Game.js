@@ -53,12 +53,13 @@ class Game extends React.Component {
         const {history} = this.state;
         const current = history[this.state.currentStepNumber];
         const {winner, winnerRow} = calculateWinner(current.squares);
-        const moves = history.map((step)=>{
+        const moves = history.map((step,move)=>{
+            const currentLocation = step.currentLocation ? `(${step.currentLocation})` : '';
             const desc = step.stepNumber ? `Go to move ${step.stepNumber}` : 'Go to game start';
             return(
                 <li key={step.stepNumber}>
                     <button>
-                        {`${desc}`}
+                        {`${desc} ${currentLocation}`}
                     </button>
                 </li>
             )
