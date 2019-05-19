@@ -56,9 +56,10 @@ class Game extends React.Component {
         const moves = history.map((step,move)=>{
             const currentLocation = step.currentLocation ? `(${step.currentLocation})` : '';
             const desc = step.stepNumber ? `Go to move ${step.stepNumber}` : 'Go to game start';
+            const classButton = move === this.state.currentStepNumber ? 'button--green' : '';
             return(
                 <li key={step.stepNumber}>
-                    <button>
+                    <button className={`${classButton} button`}>
                         {`${desc} ${currentLocation}`}
                     </button>
                 </li>
