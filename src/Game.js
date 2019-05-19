@@ -18,6 +18,7 @@ class Game extends React.Component {
         };
         this.handleClick = this.handleClick.bind(this);
         this.resetMoves = this.resetMoves.bind(this);
+        this.jumpTo = this.jumpTo.bind(this);
     }
 
     handleClick(i) {
@@ -49,6 +50,12 @@ class Game extends React.Component {
             currentStepNumber: 0,
         });
     }
+    jumpTo(step) {
+        this.setState({
+            currentStepNumber: step,
+            xIsNext: step % 2 === 0,
+        });
+    }
     render() {
         const {history} = this.state;
         const current = history[this.state.currentStepNumber];
@@ -59,7 +66,7 @@ class Game extends React.Component {
             const classButton = move === this.state.currentStepNumber ? 'button--green' : '';
             return(
                 <li key={step.stepNumber}>
-                    <button className={`${classButton} button`}>
+                    <button className={`${classButton} button`} onClick={() => this.jumpTo(move)}>
                         {`${desc} ${currentLocation}`}
                     </button>
                 </li>
