@@ -1,21 +1,7 @@
 import React from 'react';
 import Board from './Board';
+import getPoints from './Points'
 
-const getPoints = (move) => {
-    const points = {
-        0: 'row: 1, col: 1',
-        1: 'row: 1, col: 2',
-        2: 'row: 1, col: 3',
-        3: 'row: 2, col: 1',
-        4: 'row: 2, col: 2',
-        5: 'row: 2, col: 3',
-        6: 'row: 3, col: 1',
-        7: 'row: 3, col: 2',
-        8: 'row: 3, col: 3',
-    };
-
-    return points[move];
-};
 const calculateWinner = (squares) => {
     const lines = [
         [0, 1, 2],
