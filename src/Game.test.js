@@ -15,3 +15,7 @@ it('renders Game component', () => {
     const component = shallow(<Game />);
     expect(component).toHaveLength(1);
 });
+it('renders Game div', () => {
+    const component = shallow(<Game />);
+    expect(component.find('.game')).toHaveLength(1);
+});
