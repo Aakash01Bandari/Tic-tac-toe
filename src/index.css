@@ -1,10 +1,10 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font: 24px 'Comic Sans MS', Futura, sans-serif;
+  margin: 20px;
+}
+ol,
+ul {
+  padding-left: 30px;
 }
 .game {
   margin-top: 90px;
@@ -15,6 +15,10 @@ body {
   clear: both;
   content: '';
   display: table;
+}
+
+.status {
+  margin-bottom: 10px;
 }
 .square {
   background: #efffec;
@@ -43,12 +47,14 @@ body {
 }
 .reset button{
   background-color: red;
-  color:white;
+  color:black;
   font-size: 20px;
-  width:140px;
   margin-left: 20px;
-  margin-top: 30px;
+  text-align: center;
+  width:80px;
   cursor: pointer;
+  border: 2px solid black;
+  border-radius: 40px;
 }
 .button {
   background-color: #062700; /* Green */
@@ -62,13 +68,18 @@ body {
   margin-top: 8px;
   width:220px
 }
-ol,
-ul {
-  padding-left: 30px;
-}
+
 .button--green {
   background-color: #4caf50;
   color: #000;
   font-weight: bold;
   width:220px
 }
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+

@@ -95,7 +95,7 @@ class Game extends React.Component {
                 </div>
                 <div className="reset">
                     <button className="button" onClick={() => this.resetMoves()}>
-                        Reset Game
+                        Reset
                     </button>
                 </div>
             </div>
