@@ -1,15 +1,19 @@
 body {
-  font: 24px 'Comic Sans MS', Futura, sans-serif;
+  font: 24px 'Century Gothic', Futura, sans-serif;
   margin: 20px;
 }
+
 ol,
 ul {
   padding-left: 30px;
 }
-.game {
-  margin-top: 90px;
-  display: flex;
-  flex-direction: row;
+.title{
+  color:#062700;
+  text-align: center;
+  margin-left:300px;
+  font-size: 54px;
+  margin-bottom: 50px;
+  margin-top: -60px;
 }
 .board-row:after {
   clear: both;
@@ -20,13 +24,14 @@ ul {
 .status {
   margin-bottom: 10px;
 }
+
 .square {
   background: #efffec;
   border: 2px solid #1ec400;
   float: left;
+  font-size: 94px;
+  font-weight: bold;
   color:#062700;
-  font-size: 80px;
-  font-weight: 500;
   line-height: 34px;
   height: 200px;
   margin-right: -1px;
@@ -35,46 +40,11 @@ ul {
   text-align: center;
   width: 200px;
 }
-.square:focus {
-  outline: none;
-}
-.group-square{
-  margin-left:200px;
-}
-.game-info {
-  margin-left: 20px;
-  margin-top:40px;
-}
-.reset button{
-  background-color: red;
-  color:black;
-  font-size: 20px;
-  margin-left: 20px;
-  text-align: center;
-  width:80px;
-  cursor: pointer;
-  border: 2px solid black;
-  border-radius: 40px;
-}
-.button {
-  background-color: #062700; /* Green */
-  border: none;
-  color: #fff;
-  padding: 5px 10px;
-  text-align: left;
-  text-decoration: none;
-  font-size: 14px;
-  cursor: pointer;
-  margin-top: 8px;
-  width:220px
+
+.square--green {
+  background: green;
 }
 
-.button--green {
-  background-color: #4caf50;
-  color: #000;
-  font-weight: bold;
-  width:220px
-}
 .square:focus {
   outline: none;
 }
@@ -83,3 +53,44 @@ ul {
   background: #ddd;
 }
 
+.game {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+  margin-top:30px;
+}
+
+.button {
+  background-color: #062700; /* Green */
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  width:180px
+}
+
+.button--green {
+  background-color: #4caf50;
+  color: #000;
+  font-weight: bold;
+  width:180px
+}
+.group-square{
+  margin-left:250px;
+}
+.reset button{
+  background-color: red;
+  color:white;
+  font-size: 20px;
+  text-align: center;
+  width:120px;
+  margin-left: 20px;
+  margin-top: 30px;
+}

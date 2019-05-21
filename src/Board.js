@@ -18,8 +18,17 @@ class Board extends React.Component {
     }
 
     renderSquare(i) {
+        const winnerClass =
+            this.props.winnerSquares &&
+            (this.props.winnerSquares[0] === i ||
+                this.props.winnerSquares[1] === i ||
+                this.props.winnerSquares[2] === i)
+                ? 'square--green'
+                : '';
+
         return (
             <Square
+                winnerClass={winnerClass}
                 key={i}
                 value={this.props.squares[i]}
                 onClick={() => this.props.onClick(i)}

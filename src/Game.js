@@ -83,6 +83,7 @@ class Game extends React.Component {
         return (
             <div className="game">
                 <div className="game-board">
+                    <div className="title">Tic Tac Toe</div>
                     <Board
                         squares={current.squares}
                         winnerSquares={winnerRow}
