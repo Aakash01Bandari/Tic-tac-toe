@@ -85,6 +85,7 @@ class Game extends React.Component {
                 <div className="game-board">
                     <div className="title">Tic Tac Toe</div>
                     <Board
+                        disabled={winner ? true : false}
                         squares={current.squares}
                         winnerSquares={winnerRow}
                         onClick={i => this.handleClick(i)}
