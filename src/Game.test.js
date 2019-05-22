@@ -27,3 +27,7 @@ it('renders game-info', () => {
     const component = shallow(<Game />);
     expect(component.find('.game-info')).toHaveLength(1);
 });
+it('renders reset button', () => {
+    const component = shallow(<Game />);
+    expect(component.find('.reset')).toHaveLength(1);
+});
