@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Game from './Game';
+import Square from './Square';
 import { configure,shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 configure({ adapter: new Adapter() });
@@ -30,4 +31,8 @@ it('renders game-info', () => {
 it('renders reset button', () => {
     const component = shallow(<Game />);
     expect(component.find('.reset')).toHaveLength(1);
+});
+it('rendors Square component', () => {
+    const component = shallow(<Square />);
+    expect(component).toHaveLength(1);
 });
