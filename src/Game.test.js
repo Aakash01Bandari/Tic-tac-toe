@@ -36,3 +36,10 @@ it('rendors Square component', () => {
     const component = shallow(<Square />);
     expect(component).toHaveLength(1);
 });
+it('click reset button', () => {
+    const component = shallow(<Game />);
+    component.instance().resetMoves = jest.fn();
+    let { resetMoves } = component.instance();
+    component.find('button').at(1).simulate('click');
+    expect(resetMoves).toHaveBeenCalledTimes(1);
+});
