@@ -23,3 +23,7 @@ it('renders game-board', () => {
     const component = shallow(<Game />);
     expect(component.find('.game-board')).toHaveLength(1);
 });
+it('renders game-info', () => {
+    const component = shallow(<Game />);
+    expect(component.find('.game-info')).toHaveLength(1);
+});
